@@ -1,0 +1,258 @@
+/* Testimonials Widget */
+.multi-testimonials-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.multi-testimonial-item {
+  flex: 1;
+  min-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.multi-testimonial-inner {
+  display: flex;
+  align-items: flex-start;
+}
+
+.multi-testimonial-image {
+  flex-shrink: 0;
+}
+
+.multi-testimonial-image img {
+  display: block;
+  object-fit: cover;
+}
+
+.multi-testimonial-content-wrap {
+  flex-grow: 1;
+}
+
+.multi-testimonial-meta {
+  margin-bottom: 10px;
+}
+
+.multi-testimonial-name {
+  margin: 0 0 5px;
+  font-weight: 600;
+}
+
+.multi-testimonial-position {
+  display: block;
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.multi-testimonial-rating {
+  margin-bottom: 15px;
+  color: #ffc107;
+}
+
+.multi-testimonial-content {
+  line-height: 1.6;
+}
+
+/* Timeline Widget */
+.multi-timeline-wrapper {
+  position: relative;
+}
+
+.multi-timeline-line {
+  position: absolute;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+.multi-timeline-vertical .multi-timeline-line {
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+}
+
+.multi-timeline-horizontal .multi-timeline-line {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform: translateY(-50%);
+}
+
+.multi-timeline-items {
+  position: relative;
+  z-index: 2;
+}
+
+.multi-timeline-vertical .multi-timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.multi-timeline-horizontal .multi-timeline-items {
+  display: flex;
+  gap: 30px;
+}
+
+.multi-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.multi-timeline-vertical .multi-timeline-item {
+  flex-direction: row;
+}
+
+.multi-timeline-horizontal .multi-timeline-item {
+  flex-direction: column;
+  flex: 1;
+}
+
+.multi-timeline-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #6e41e2;
+  color: #fff;
+  flex-shrink: 0;
+}
+
+.multi-timeline-vertical .multi-timeline-icon {
+  margin-top: 5px;
+}
+
+.multi-timeline-horizontal .multi-timeline-icon {
+  margin: 0 auto;
+}
+
+.multi-timeline-icon i {
+  display: block;
+}
+
+.multi-timeline-content-wrap {
+  flex-grow: 1;
+}
+
+.multi-timeline-date {
+  font-weight: 600;
+  color: #6e41e2;
+}
+
+.multi-timeline-title {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.multi-timeline-content {
+  line-height: 1.6;
+}
+
+/* Cards Widget */
+.multi-cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.multi-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.multi-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.multi-card-image {
+  overflow: hidden;
+}
+
+.multi-card-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.multi-card-body {
+  padding: 20px;
+}
+
+.multi-card-title {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.multi-card-description {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.multi-card-button {
+  display: inline-block;
+  padding: 10px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effects */
+.multi-card-effect-lift:hover {
+  transform: translateY(-10px);
+}
+
+.multi-card-effect-shadow:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.multi-card-effect-grow:hover {
+  transform: scale(1.03);
+}
+
+.multi-card:hover .multi-card-image img {
+  transform: scale(1.1);
+}
+
+/* Columns */
+.multi-cards-columns-1 .multi-card {
+  flex: 0 0 calc(100% - 30px);
+}
+
+.multi-cards-columns-2 .multi-card {
+  flex: 0 0 calc(50% - 30px);
+}
+
+.multi-cards-columns-3 .multi-card {
+  flex: 0 0 calc(33.333% - 30px);
+}
+
+.multi-cards-columns-4 .multi-card {
+  flex: 0 0 calc(25% - 30px);
+}
+
+@media (max-width: 1024px) {
+  .multi-cards-columns-3 .multi-card,
+  .multi-cards-columns-4 .multi-card {
+    flex: 0 0 calc(50% - 30px);
+  }
+}
+
+@media (max-width: 767px) {
+  .multi-cards-columns-2 .multi-card,
+  .multi-cards-columns-3 .multi-card,
+  .multi-cards-columns-4 .multi-card {
+    flex: 0 0 calc(100% - 30px);
+  }
+
+  .multi-timeline-horizontal .multi-timeline-items {
+    flex-direction: column;
+  }
+}
